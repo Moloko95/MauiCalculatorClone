@@ -1,0 +1,57 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalculatorClone.MainPage"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout Padding="20">
+        <!-- Display -->
+        
+        <Label x:Name="DisplayLabel"
+               
+            Text="0"
+            FontSize="48"
+            HorizontalTextAlignment="End"
+            TextColor="White"
+            BackgroundColor="Black"
+            Padding="10"
+            HeightRequest="100" />
+
+
+        <!-- Buttons Grid -->
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+              ColumnDefinitions="Auto,Auto,Auto,Auto"
+              ColumnSpacing="10"
+              RowSpacing="10"
+              Padding="5">
+
+            <!-- First Row -->
+            <Button Text="C" Grid.Row="0" Grid.Column="0" Clicked="OnClearClicked"/>
+            <Button Text="±" Grid.Row="0" Grid.Column="1" Clicked="OnNegateClicked"/>
+            <Button Text="%" Grid.Row="0" Grid.Column="2" Clicked="OnPercentClicked"/>
+            <Button Text="÷" Grid.Row="0" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="Orange" TextColor="White"/>
+
+            <!-- Second Row -->
+            <Button Text="7" Grid.Row="1" Grid.Column="0" Clicked="OnDigitClicked"/>
+            <Button Text="8" Grid.Row="1" Grid.Column="1" Clicked="OnDigitClicked"/>
+            <Button Text="9" Grid.Row="1" Grid.Column="2" Clicked="OnDigitClicked"/>
+            <Button Text="×" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="Orange" TextColor="White"/>
+
+            <!-- Third Row -->
+            <Button Text="4" Grid.Row="2" Grid.Column="0" Clicked="OnDigitClicked"/>
+            <Button Text="5" Grid.Row="2" Grid.Column="1" Clicked="OnDigitClicked"/>
+            <Button Text="6" Grid.Row="2" Grid.Column="2" Clicked="OnDigitClicked"/>
+            <Button Text="-" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="Orange" TextColor="White"/>
+
+            <!-- Fourth Row -->
+            <Button Text="1" Grid.Row="3" Grid.Column="0" Clicked="OnDigitClicked"/>
+            <Button Text="2" Grid.Row="3" Grid.Column="1" Clicked="OnDigitClicked"/>
+            <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="OnDigitClicked"/>
+            <Button Text="+" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="Orange" TextColor="White"/>
+
+            <!-- Fifth Row -->
+            <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Clicked="OnDigitClicked"/>
+            <Button Text="." Grid.Row="4" Grid.Column="2" Clicked="OnDecimalClicked"/>
+            <Button Text="=" Grid.Row="4" Grid.Column="3" Clicked="OnEqualsClicked" BackgroundColor="Orange" TextColor="White"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

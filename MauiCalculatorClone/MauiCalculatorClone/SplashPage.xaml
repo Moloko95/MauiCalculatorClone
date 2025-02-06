@@ -1,0 +1,10 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalculatorClone.SplashPage"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Image Source="splash.png" WidthRequest="200" HeightRequest="200"/>
+        <ActivityIndicator IsRunning="True" Color="White"/>
+    </VerticalStackLayout>
+</ContentPage>
