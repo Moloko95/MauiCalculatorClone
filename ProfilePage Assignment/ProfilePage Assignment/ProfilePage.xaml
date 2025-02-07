@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ProfilePage_Assingment.ProfilePage">
+
+    <StackLayout Padding="10">
+
+        <Entry x:Name="NameEntry" Placeholder="Name"/>
+        <Entry x:Name="SurnameEntry" Placeholder="Surname"/>
+        <Entry x:Name="EmailEntry" Placeholder="Email Address"/>
+        <Editor x:Name="BioEditor" Placeholder="Bio"/>
+
+        <!-- For image picker -->
+        <Image x:Name="ProfileImage" HeightRequest="100" WidthRequest="100" />
+        <Button Text="Choose Picture" Clicked="OnChoosePictureClicked" />
+
+        <Button Text="Save" Clicked="OnSaveButtonClicked"/>
+
+    </StackLayout>
+</ContentPage>
